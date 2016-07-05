@@ -67,6 +67,9 @@ residuals=t1["imag"]-(mu+absmagH)
 
 
 plt.errorbar(t1["logM_"],residuals,t1["e_logM_1"]*0,t1["e_logM_1"],'o')
+plt.xlabel('Stellar Mass')
+plt.ylabel('Residuals')
+plt.title('Host Galaxy Sullivian')
 plt.show()
 
 
@@ -116,7 +119,7 @@ print Residuals
 
 
 
-#Plot for SFR versus Star Formation
+#Plot for Stellar Mass versus Star Formation
 
 plt.figure(1)
 plt.errorbar(t1["logM_"],t1["logSFR"],[t1["e_logSFR1"],t1["E_logSFR"]],[t1["e_logM_1"],t1["E_logM_"]],fmt='o',ecolor='g',label="SNLS")
@@ -125,6 +128,7 @@ plt.ylabel("LOG host galaxy SFR")
 plt.title("SULLIVIAN et al 2010, SNLS data")
 plt.axis([7, 12, -3.5, 2.5])
 plt.legend(loc=1)
+plt.savefig('SFR_vs_StellarMass')
 plt.show()
 
 
@@ -139,7 +143,7 @@ plt.ylabel('Relative Number')
 plt.title(r'$\mathrm{Histogram\ of\ Log\ host\ Galaxy}\ $')
 plt.axis([6, 13, 0, 1])
 plt.grid(True)
-plt.savefig('Stellar Mass Histogram')
+plt.savefig('Stellar_Mass_Histogram')
 plt.show()
 
 
@@ -150,7 +154,7 @@ plt.ylabel('Relative Number')
 plt.title(r'$\mathrm{Histogram\ of\ Log\ host\ Galaxy}\ $')
 plt.axis([-4,4, 0, 1])
 plt.grid(True)
-plt.savefig('Star Formation Rate Histogram')
+plt.savefig('SFR_Histogram')
 plt.show()
 
  
